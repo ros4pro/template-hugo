@@ -1,0 +1,20 @@
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "ROS4Pro"
+license = "MIT"
+licenselink = "https://github.com/ros4pro/learn-hugo/blob/master/LICENSE"
+description = "ROS4Pro theme for Hugo"
+homepage = "https://github.com/matcornic/hugo-theme-learn/"
+repo = "https://github.com/matcornic/hugo-theme-learn"
+tags = ["documentation", "grav", "learn", "doc", "search"]
+features = ["documentation", "menu", "nested sections", "search", "mermaid"]
+min_version = 0.82
+
+authors = [
+  {name = "ROS4Pro", homepage = "https://ros4.pro"},
+  {name = "Etienne SCHMITZ", homepage = "https://etienne-schmitz.com"}
+]
+[original]
+  name = "Hugo Theme Learn"
+  homepage = "https://learn.netlify.app/en/"
+  repo = "https://github.com/matcornic/hugo-theme-learn"
