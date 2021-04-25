@@ -1,5 +1,7 @@
 {{with .Get "url"}}
-<object data='{{".Get "url"}}'  type="application/pdf" width="100%" height="565px">
-    <p>Alternative text - include a link <a href='{{".Get "url"}}'>to the PDF!</a></p>
-</object>
+	<object data="{{.Get "src"}}" type="application/pdf" {{ if .Get "width" }} width="{{ with .Get "width"}}{{.}}{{else}}100%{{end}}" {{ if .Get "height" }} height="{{ with .Get "width"}}{{.}}{{else}}565px{{end}}">
+		<p>Alternative text - include a link
+			<a href='{{.Get "src"}}'>to the PDF!</a>
+		</p>
+	</object>
 {{ end }}
