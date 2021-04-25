@@ -1,0 +1,5 @@
+{{with .Get "url"}}
+<object data='{{".Get "url"}}'  type="application/pdf" width="100%" height="565px">
+    <p>Alternative text - include a link <a href='{{".Get "url"}}'>to the PDF!</a></p>
+</object>
+{{ end }}
