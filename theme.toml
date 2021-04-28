@@ -7,7 +7,7 @@ description = "ROS4Pro theme for Hugo"
 homepage = "https://github.com/matcornic/hugo-theme-learn/"
 repo = "https://github.com/matcornic/hugo-theme-learn"
 tags = ["documentation", "grav", "learn", "doc", "search"]
-features = ["documentation", "menu", "nested sections", "search", "mermaid"]
+features = ["documentation", "menu", "nested sections", "search"]
 min_version = 0.82
 
 authors = [
