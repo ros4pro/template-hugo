@@ -333,7 +333,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     border: 1px solid #ccc;
 }
 #body .padding {
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 6rem;
 }
 @media only all and (max-width: 59.938em) {
     #body .padding {
@@ -1027,16 +1027,6 @@ td {
     .sidebar-hidden #body {
         margin-left: 230px;
         overflow: hidden;
-    }
-    .sidebar-hidden #overlay {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 10;
-        background: rgba(255, 255, 255, 0.5);
-        cursor: pointer;
     }
 }
 .copy-to-clipboard {
