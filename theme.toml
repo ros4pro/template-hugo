@@ -6,8 +6,8 @@ licenselink = "https://github.com/ros4pro/learn-hugo/blob/master/LICENSE"
 description = "ROS4Pro theme for Hugo"
 homepage = "https://github.com/matcornic/hugo-theme-learn/"
 repo = "https://github.com/matcornic/hugo-theme-learn"
-tags = ["documentation", "grav", "learn", "doc", "search"]
-features = ["documentation", "menu", "nested sections", "search"]
+tags = ["documentation", "grav", "learn", "doc"]
+features = ["documentation", "menu", "nested sections"]
 min_version = 0.82
 
 authors = [
