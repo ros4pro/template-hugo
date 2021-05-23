@@ -8,14 +8,14 @@
     {{ partial "favicon.html" . }}
     <title>{{ .Title }}</title>
 
+    {{ partial "head_import.html" }}
+
     {{ $assetBusting := not .Site.Params.disableAssetsBusting }}
-    <link href="{{"css/nucleus.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/fontawesome-all.min.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/hybrid.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/featherlight.min.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/atom-one-dark-reasonable.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/theme.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
-    <link href="{{"css/tabs.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/hugo-theme.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     {{with .Site.Params.themeVariant}}
     <link href="{{(printf "css/theme-%s.css" .) | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
@@ -43,46 +43,6 @@
         <section id="body">
         <div id="overlay"></div>
         <div class="padding highlightable">
-              {{if not .IsHome}}
-              <div>
-                {{/*  <div id="top-bar">
-                {{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
-                  {{ $File := .File }}
-                  {{ $Site := .Site }}
-                  {{with $File.Path }}
-                  <div id="top-github-link">
-                    <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
-                      <i class="fas fa-code-branch"></i>
-                      <span id="top-github-link-text">{{T "Edit-this-page"}}</span>
-                    </a>
-                  </div>
-                  {{ end }}
-                {{ end }}
-                {{$toc := (and (not .Params.disableToc) (not .Params.chapter))}}
-                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <span id="sidebar-toggle-span">
-                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
-                          <i class="fas fa-bars"></i>
-                        </a>
-                    </span>
-                  {{ if $toc }}
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  {{ end }}
-                  <span class="links">
-                 {{$showBreadcrumb := (and (not .Params.disableBreadcrumb) (not .Site.Params.disableBreadcrumb))}}
-                 {{if $showBreadcrumb}}
-                    {{ template "breadcrumb" dict "page" . "value" .Title }}
-                 {{ else }}
-                   {{ .Title }}
-                 {{ end }}
-                  </span>
-                </div>
-                {{ if $toc }}
-                    {{ partial "toc.html" . }}
-                {{ end }}
-              </div>  */}}
-            </div>
-            {{ end }}
         <div id="head-tags">
         {{ partial "tags.html" . }}
         </div>
